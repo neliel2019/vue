@@ -5,9 +5,12 @@ Vue.use(VueRouter)
 import login from "@/components/login";
 import registered from "@/components/registered"
 import mainpage from "./components/mainpage";
-
-
-
+import Navmenu from "./components/navmenu";
+import HomeCompnent from "./components/HomeCompnent";
+import ExamComponent from "./components/ExamComponent";
+import SpecialComponent from "./components/SpecialComponent";
+import ScoreComponent from "./components/ScoreComponent";
+import MineComponent from "./components/MineComponent";
 var router=new VueRouter({
     routes: [
         { path: '/', component: login,
@@ -23,7 +26,53 @@ var router=new VueRouter({
             ]
         },{
         path: '/mainpage',
-            component: mainpage
+            component:mainpage,
+            redirect:'/mainpage/home',
+            children: [
+                {
+
+                    path: '/mainpage/home',
+                    components:{
+                        navmenu:Navmenu,
+                        default:HomeCompnent
+
+                    }
+                },
+                {
+                  path:'/mainpage/exam',
+                    components:{
+                        navmenu:Navmenu,
+                        default:ExamComponent
+
+                    }
+                },
+
+                {
+                    path:'/mainpage/special',
+                    components:{
+                        navmenu:Navmenu,
+                        default:SpecialComponent
+
+                    }
+
+
+                },
+                {
+                    path:'/mainpage/score',
+                    components:{
+                        navmenu:Navmenu,
+                        default:ScoreComponent
+
+                    }},
+
+                {
+                    path:'/mainpage/mine',
+                    components:{
+                        navmenu:Navmenu,
+                        default:MineComponent
+
+                    }},
+            ]
         },
 
     ]})

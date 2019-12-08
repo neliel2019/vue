@@ -58,7 +58,7 @@
 
 
 
-                            router.push({ path: 'homepage' })
+                            router.push({ path: 'mainpage' })
 
 
                             // eslint-disable-next-line no-empty
