@@ -4,6 +4,7 @@ Vue.use(VueRouter)
 
 import login from "@/components/login";
 import registered from "@/components/registered"
+import mainpage from "./components/mainpage";
 
 
 
@@ -21,13 +22,10 @@ var router=new VueRouter({
 
             ]
         },{
-        path: '/registered',
-            component: registered
+        path: '/mainpage',
+            component: mainpage
         },
-        {
-            path:'/mainpage'
 
-        }
     ]})
 
 
