@@ -5,7 +5,6 @@ Vue.use(VueRouter)
 import login from "@/components/login";
 import registered from "@/components/registered"
 import mainpage from "./components/mainpage";
-import Navmenu from "./components/navmenu";
 import HomeCompnent from "./components/HomeCompnent";
 import ExamComponent from "./components/ExamComponent";
 import SpecialComponent from "./components/SpecialComponent";
@@ -33,7 +32,7 @@ var router=new VueRouter({
 
                     path: '/mainpage/home',
                     components:{
-                        navmenu:Navmenu,
+
                         default:HomeCompnent
 
                     }
@@ -41,7 +40,6 @@ var router=new VueRouter({
                 {
                   path:'/mainpage/exam',
                     components:{
-                        navmenu:Navmenu,
                         default:ExamComponent
 
                     }
@@ -50,7 +48,6 @@ var router=new VueRouter({
                 {
                     path:'/mainpage/special',
                     components:{
-                        navmenu:Navmenu,
                         default:SpecialComponent
 
                     }
@@ -60,7 +57,6 @@ var router=new VueRouter({
                 {
                     path:'/mainpage/score',
                     components:{
-                        navmenu:Navmenu,
                         default:ScoreComponent
 
                     }},
@@ -68,7 +64,6 @@ var router=new VueRouter({
                 {
                     path:'/mainpage/mine',
                     components:{
-                        navmenu:Navmenu,
                         default:MineComponent
 
                     }},

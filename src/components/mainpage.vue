@@ -1,12 +1,16 @@
 <template>
     <div id="main">
-    <router-view name="navmenu" class="navmenu"></router-view>
-    <router-view></router-view>
+    <navmenu class="navmenu"></navmenu>
+        <keep-alive>
+    <router-view ></router-view>
+        </keep-alive>
     </div>
 </template>
 
 <script>
+    import navmenu from "./navmenu";
     export default {
+        components: {navmenu},
         data() {
             return {
 
